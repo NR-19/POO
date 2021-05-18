@@ -1,5 +1,5 @@
 //composição
-public class Triangulo {
+public class Triangulo implements Comparable<Triangulo>{
 
     private Ponto p1;
     private Ponto p2;
@@ -72,6 +72,11 @@ public class Triangulo {
                 ", p2=" + p2 +
                 ", p3=" + p3 +
                 '}';
+    }
+
+    //baseado na ordenação crescente da area do triangulo
+    public int compareTo(Triangulo t){
+        return (int)(this.calculaAreaTriangulo() - t.calculaAreaTriangulo());
     }
 
 
